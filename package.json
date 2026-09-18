@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@playwright/test": "^1.49.0",
+    "hyperframes": "^0.8.48",
     "zod": "^3.25.0"
   }
 }

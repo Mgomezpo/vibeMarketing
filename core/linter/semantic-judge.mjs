@@ -93,7 +93,8 @@ async function callJudgeLLM(prompt) {
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.0,
         response_format: { type: 'json_object' }
-      })
+      }),
+      signal: AbortSignal.timeout(8000)
     });
     if (res.ok) {
       const data = await res.json();

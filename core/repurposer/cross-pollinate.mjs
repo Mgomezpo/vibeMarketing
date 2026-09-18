@@ -69,7 +69,8 @@ SALIDA REQUERIDA (Únicamente este JSON válido):
           messages: [{ role: 'user', content: prompt }],
           temperature: 0.3,
           response_format: { type: 'json_object' }
-        })
+        }),
+        signal: AbortSignal.timeout(10000)
       });
       if (res.ok) {
         const d = await res.json();
