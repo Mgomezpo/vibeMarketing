@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    @page { size: 1080px 1350px; margin: 0; }
+    body {
+      background-color: #0D1117;
+      color: #F0F6FC;
+      font-family: 'Inter', system-ui, sans-serif;
+      width: 1080px;
+    }
+    .slide {
+      width: 1080px;
+      height: 1350px;
+      page-break-after: always;
+      break-after: page;
+      position: relative;
+      background: radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                  #0D1117;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+      pointer-events: none;
+    }
+    .slide-inner {
+      width: 1080px;
+      height: 1350px;
+      padding: 95px 85px 85px 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 24px;
+    }
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #38BDF8;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+    }
+    .brand-name { color: #F0F6FC; }
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #38BDF8;
+    }
+    .slide-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      padding: 40px 0;
+    }
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 6px 14px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 3px;
+      color: #38BDF8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .slide-title {
+      font-size: 54px;
+      line-height: 1.15;
+      font-weight: 700;
+      color: #F0F6FC;
+      letter-spacing: -0.02em;
+      margin-bottom: 26px;
+    }
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: #38BDF8;
+      margin-bottom: 30px;
+    }
+    .slide-body {
+      font-size: 26px;
+      line-height: 1.55;
+      color: #8B949E;
+      font-weight: 400;
+      max-width: 900px;
+    }
+    .metric-box {
+      margin-top: 40px;
+      background: #161B22;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 3px solid #38BDF8;
+      border-radius: 6px;
+      padding: 22px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .metric-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: #8B949E;
+    }
+    .metric-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 32px;
+      font-weight: 600;
+      color: #F0F6FC;
+    }
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+    .footer-note { color: #8B949E; }
+    .footer-hint { color: #38BDF8; }
+  </style>
+</head>
+<body>
+  {{SLIDES}}
+</body>
+</html>

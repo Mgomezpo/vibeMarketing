@@ -1,0 +1,16 @@
+{
+  "id": "tia",
+  "name": "The Insightful Arrow",
+  "displayName": "THE INSIGHTFUL ARROW",
+  "tagline": "OPERATIONAL INFRASTRUCTURE & AGENTIC SYSTEMS",
+  "governance": "FULLY_AUTOMATED",
+  "targetAccount": {
+    "instagram": "insightful_arrow",
+    "linkedin": "the-insightful-arrow"
+  },
+  "platforms": ["instagram", "linkedin"],
+  "voiceDescription": "Voz de Director de Operaciones (COO) frío, sereno, matemático y quirúrgico hablando de par a par con otro tomador de decisiones. Cero jerga de IA (prohibido decir IA, prompt, ChatGPT, LLM). Venta de infraestructura fija de $5,000/mes para Agencias y Automotriz.",
+  "forbiddenTerms": [
+    "IA", "inteligencia\\s+artificial", "LLM", "LLMs", "prompt", "prompts", "prompting", "ChatGPT", "Claude", "algoritmo", "machine\\s+learning"
+  ]
+}

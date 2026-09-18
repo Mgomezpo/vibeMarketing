@@ -1,0 +1,22 @@
+{
+  "name": "vibemarketing-os",
+  "version": "1.0.0",
+  "description": "vibeMarketing Multi-Brand OS — Motor unificado de marketing de contenidos automatizados para The Insightful Arrow, IREAL y Miguel Gómez",
+  "type": "module",
+  "scripts": {
+    "test": "node engine.mjs test --brand tia",
+    "test:all": "node engine.mjs test-all",
+    "tia:draft": "node engine.mjs draft --brand tia",
+    "tia:live": "node engine.mjs run --brand tia",
+    "ireal:draft": "node engine.mjs draft --brand ireal",
+    "ireal:live": "node engine.mjs run --brand ireal",
+    "miguel:draft": "node engine.mjs draft --brand miguel",
+    "miguel:review": "node engine.mjs review --brand miguel",
+    "status": "node engine.mjs status",
+    "repurpose": "node engine.mjs repurpose"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "zod": "^3.25.0"
+  }
+}

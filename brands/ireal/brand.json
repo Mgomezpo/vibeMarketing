@@ -1,0 +1,15 @@
+{
+  "id": "ireal",
+  "name": "IREAL",
+  "displayName": "IREAL — CUADERNO MÁGICO",
+  "tagline": "DE LA IDEA AL CALENDARIO EN MINUTOS",
+  "governance": "FULLY_AUTOMATED",
+  "targetAccount": {
+    "instagram": "ireal"
+  },
+  "platforms": ["instagram"],
+  "voiceDescription": "Voz de cuaderno creativo para creadores de contenido hispanohablantes. Tono: Tú a tú, inspirador, práctico, honesto y creativo (estilo Rick Rubin / Apple cuaderno analógico). Cero jerga corporativa, cero humo de marketing. Habla de ordenar el caos creativo, ideas dispersas y planes listos para ejecutar.",
+  "forbiddenTerms": [
+    "sinergia", "holístico", "innovación disruptiva", "game-changer", "ingresos pasivos", "despega tu negocio"
+  ]
+}
