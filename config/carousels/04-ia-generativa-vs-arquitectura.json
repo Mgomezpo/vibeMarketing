@@ -1,0 +1,131 @@
+{
+  "id": "04-ia-generativa-vs-arquitectura",
+  "title": "IA Generativa vs Arquitectura Agéntica",
+  "pillar": "Pilar B",
+  "theme": "ai-architecture",
+  "slides": [
+    {
+      "slide_number": "01",
+      "type": "cover",
+      "top_tag": "ANÁLISIS TÉCNICO B2B  ·  01 / 05",
+      "title_serif": "EL HYPE DE LA IA",
+      "title_sans": "ES UN JUGUETE CARO",
+      "subtitle": "Muchos creen que hacer prompts es construir una empresa. <span class=\"gold-text\">La realidad es que un prompt es una sugerencia</span>; un sistema es una garantía.",
+      "footer_left": "SISTEMAS DETERMINISTAS // TIA",
+      "footer_right": "DESLIZA →",
+      "bg_image": "slide_01.jpg"
+    },
+    {
+      "slide_number": "02",
+      "type": "split",
+      "top_tag": "02 / 05  ·  EL SÍNTOMA",
+      "title_serif": "EL PROBLEMA DEL",
+      "title_sans": "PROMPTING",
+      "subtitle": "Confías tu operación a una caja negra que hoy te da un resultado brillante y mañana alucina datos.",
+      "col_left": {
+        "tag": "01 · EL AZAR",
+        "title": "Dependencia del Prompt",
+        "body": "Pasas horas ajustando palabras para que la IA 'entienda'. El resultado es variable y frágil.",
+        "stat_num": "0%",
+        "stat_desc": "PREDICTIBILIDAD OPERATIVA",
+        "stat_type": "negative"
+      },
+      "col_right": {
+        "tag": "02 · EL RIESGO",
+        "title": "Alucinación Silenciosa",
+        "body": "La IA inventa un dato con total seguridad. Si el humano no revisa cada coma, el error llega al cliente.",
+        "stat_num": "100%",
+        "stat_desc": "RIESGO DE REVISIÓN MANUAL",
+        "stat_type": "gold"
+      },
+      "footer_left": "SISTEMAS VS PROMPTS // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_02.jpg"
+    },
+    {
+      "slide_number": "03",
+      "type": "compare",
+      "top_tag": "03 / 05  ·  EL ARBITRAJE",
+      "title_serif": "PROMPTS SON SUGERENCIAS.",
+      "title_sans": "SISTEMAS SON GARANTÍAS.",
+      "quote": "«Sustituir un proceso humano desordenado por un prompt de IA solo crea un desorden más rápido y difícil de rastrear.»",
+      "col_left": {
+        "title": "IA Generativa Pura",
+        "badge": "Sugerencia",
+        "items": [
+          "Depende de la 'suerte' del modelo",
+          "Inconsistente en volumen",
+          "Caja negra sin auditoría",
+          "Fallo catastrófico impredecible"
+        ]
+      },
+      "col_right": {
+        "title": "Arquitectura Agéntica",
+        "badge": "Determinista",
+        "items": [
+          "Reglas lógicas inmutables",
+          "Consistencia total en escala",
+          "Trazabilidad de cada paso",
+          "Compuertas de validación humana"
+        ]
+      },
+      "footer_left": "INGENIERÍA DE SISTEMAS // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_03.jpg"
+    },
+    {
+      "slide_number": "04",
+      "type": "steps",
+      "top_tag": "04 / 05  ·  LA TRANSICIÓN",
+      "title_serif": "CONSTRUIR COMPUERTAS,",
+      "title_sans": "NO PROMPTS.",
+      "subtitle": "Cómo se pasa del azar a la arquitectura:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Mapeo de Reglas Frías",
+          "body": "Extraer la lógica del proceso. Si no se puede escribir en un diagrama, no se puede automatizar.",
+          "highlight": false
+        },
+        {
+          "num": "02",
+          "title": "Capa de Ejecución Agéntica",
+          "body": "El agente ejecuta la tarea mecánica basándose en la regla, no en una 'inspiración' del prompt.",
+          "highlight": true
+        },
+        {
+          "num": "03",
+          "title": "Validación Determinista",
+          "body": "Una compuerta verifica el resultado contra el KPI. Si falla, se rechaza automáticamente.",
+          "highlight": false
+        }
+      ],
+      "footer_left": "PROTOCOLO DE IMPLEMENTACIÓN // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_04.jpg"
+    },
+    {
+      "slide_number": "05",
+      "type": "cta",
+      "top_tag": "05 / 05  ·  SIGUIENTE PASO",
+      "title_serif": "DEJA DE JUGAR CON LA IA.",
+      "title_sans": "EMPIEZA A CONSTRUIR.",
+      "metrics": [
+        {
+          "num": "100%",
+          "desc": "CONTROL OPERATIVO REAL"
+        },
+        {
+          "num": "0",
+          "desc": "ALUCINACIONES EN PRODUCCIÓN"
+        }
+      ],
+      "cta_badge": "AUDITORÍA DE ARQUITECTURA",
+      "cta_title": "Comenta \"SISTEMA\"",
+      "cta_desc": "Analizamos tu stack actual y te decimos dónde tienes 'juguetes' que deberían ser 'sistemas'.",
+      "footer_left": "THE INSIGHTFUL ARROW // INFRAESTRUCTURA B2B",
+      "footer_right": "@THEINSIGHTFULARROW",
+      "bg_image": "slide_05.jpg"
+    }
+  ]
+}

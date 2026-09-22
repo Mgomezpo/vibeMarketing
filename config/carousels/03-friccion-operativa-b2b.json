@@ -1,0 +1,134 @@
+{
+  "id": "03-friccion-operativa-b2b",
+  "title": "Auditoría Operativa B2B: Fricción No Facturable",
+  "pillar": "Pilar A",
+  "theme": "operational-audit",
+  "slides": [
+    {
+      "slide_number": "01",
+      "type": "cover",
+      "top_tag": "AUDITORÍA OPERATIVA B2B  ·  01 / 05",
+      "title_serif": "EL TIEMPO NO FACTURABLE",
+      "title_sans": "ESTÁ DEVORANDO TU MARGEN",
+      "subtitle": "Tus mejores consultores y directores no están quemados por el trabajo de clientes. <span class=\"gold-text\">Están quemados por la burocracia invisible</span> y el desorden operativo de tu propia agencia.",
+      "footer_left": "RENTABILIDAD & OPERACIONES // TIA",
+      "footer_right": "DESLIZA →",
+      "bg_image": "slide_01.jpg"
+    },
+    {
+      "slide_number": "02",
+      "type": "split",
+      "top_tag": "02 / 05  ·  LA FUGA INVISIBLE",
+      "title_serif": "VENDES 160 HORAS AL MES",
+      "title_sans": "PERO SÓLO FACTURAS 70",
+      "subtitle": "Dónde se disuelve la rentabilidad real del talento senior en empresas de servicios profesionales:",
+      "col_left": {
+        "tag": "01 · TRABAJO FACTURABLE REAL",
+        "title": "Estrategia y Criterio de Alto Valor",
+        "body": "El trabajo por el que el cliente paga: análisis profundo, toma de decisiones, desarrollo de entregables y resolución creativa de problemas.",
+        "stat_num": "45%",
+        "stat_desc": "DEL TIEMPO SEMANAL EFECTIVAMENTE FACTURADO",
+        "stat_type": "gold"
+      },
+      "col_right": {
+        "tag": "02 · EL AGUJERO NEGRO",
+        "title": "Fricción de Coordinación Interna",
+        "body": "Buscar archivos en Drive, perseguir accesos por WhatsApp, armar reportes manuales en slides y recordar entregas internas pendientes.",
+        "stat_num": "55%",
+        "stat_desc": "DE LA JORNADA CONSUMIDA EN GESTIÓN NO MONETIZABLE",
+        "stat_type": "negative"
+      },
+      "footer_left": "AUDITORÍA DE RENTABILIDAD // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_02.jpg"
+    },
+    {
+      "slide_number": "03",
+      "type": "compare",
+      "top_tag": "03 / 05  ·  EL DIAGNÓSTICO",
+      "title_serif": "EL PROBLEMA NO ES LA CARGA DE CLIENTES.",
+      "title_sans": "ES LA FALTA DE PROTOCOLO.",
+      "quote": "«Cuando el onboarding de un cliente depende de 20 mensajes informales de WhatsApp, cada nuevo contrato multiplica el caos interno en vez de multiplicar el beneficio.»",
+      "col_left": {
+        "title": "La Agencia Tradicional (Fricción)",
+        "badge": "DESORDEN ESTRUCTURAL",
+        "items": [
+          "Briefs incompletos que exigen 3 reuniones de aclaración",
+          "Reportes de rendimiento armados a mano en presentaciones",
+          "El director actúa como cuello de botella para aprobar todo",
+          "Horas no facturadas tratando de apagar incendios urgentes",
+          "Sensación de saturación crónica a pesar de tener equipo"
+        ]
+      },
+      "col_right": {
+        "title": "La Agencia Sistematizada (TIA)",
+        "badge": "INFRAESTRUCTURA DE ALTO MARGEN",
+        "items": [
+          "Compuertas deterministas que rechazan briefs incompletos",
+          "Consolidación de métricas y generación de reportes en segundos",
+          "Pre-validación automática de entregables antes de revisión senior",
+          "Capacidad de duplicar clientes sin duplicar nómina operativa",
+          "Márgenes netos protegidos y equipo enfocado en estrategia"
+        ]
+      },
+      "footer_left": "EFICIENCIA OPERATIVA // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_03.jpg"
+    },
+    {
+      "slide_number": "04",
+      "type": "steps",
+      "top_tag": "04 / 05  ·  EL PLAN DE ACCIÓN",
+      "title_serif": "TRES PASOS PARA BLINDAR",
+      "title_sans": "LA CAPACIDAD DE TU EQUIPO",
+      "subtitle": "Cómo erradicar la fricción no facturable sin traumatizar la operación diaria:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Auditoría de Micro-Fricciones",
+          "body": "Mapeamos con precisión milimétrica cuántas horas semanales invierte cada rol en tareas repetitivas que no requieren criterio humano.",
+          "highlight": false
+        },
+        {
+          "num": "02",
+          "title": "Estandarización de Compuertas de Entrada",
+          "body": "Ningún proyecto arranca con datos rotos. Un agente valida accesos, marcas y entregables requeridos de forma inmediata.",
+          "highlight": true
+        },
+        {
+          "num": "03",
+          "title": "Automatización de Triage y Reportes",
+          "body": "El sistema sintetiza métricas y genera borradores de informe automáticamente para que el consultor solo añada el análisis estratégico.",
+          "highlight": false
+        }
+      ],
+      "footer_left": "PROTOCOLO DE DESPLIEGUE // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_04.jpg"
+    },
+    {
+      "slide_number": "05",
+      "type": "cta",
+      "top_tag": "05 / 05  ·  SIGUIENTE PASO",
+      "title_serif": "RECUPERA EL MARGEN",
+      "title_sans": "QUE TU EQUIPO ESTÁ REGALANDO",
+      "metrics": [
+        {
+          "num": "+35%",
+          "desc": "HORAS FACTURABLES RECUPERADAS POR CONSULTOR"
+        },
+        {
+          "num": "1 SEMANA",
+          "desc": "PARA IMPLEMENTAR LA PRIMERA COMPUERTA"
+        }
+      ],
+      "cta_badge": "AUDITORÍA OPERATIVA B2B",
+      "cta_title": "Comenta \"MARGEN\"",
+      "cta_desc": "Analizamos tu estructura de entregables y detectamos exactamente dónde se están fugando las horas no facturables de tus consultores más costosos.",
+      "footer_left": "THE INSIGHTFUL ARROW // INFRAESTRUCTURA B2B",
+      "footer_right": "@THEINSIGHTFULARROW",
+      "bg_image": "slide_05.jpg"
+    }
+  ],
+  "caption": "Pregunta incómoda para dueños de agencias y firmas de consultoría:\n\nDe las 40 horas que trabaja tu director de cuentas a la semana, ¿cuántas se le pueden facturar de verdad a un cliente?\n\nEn la mayoría de firmas de servicios, la respuesta real no supera el 45%.\n\nEl resto del tiempo se lo traga la burocracia interna:\n→ Perseguir clientes por WhatsApp porque enviaron el brief incompleto.\n→ Armar reportes mensuales de PowerPoint copiando y pegando métricas de Meta y Google.\n→ Reenviar correos para recordar entregables que deberían estar automatizados.\n\nContratar más coordinadores no soluciona esto: solo reparte el desorden entre más sueldos.\n\nLa solución es poner compuertas de software deterministas:\nSi el cliente no completa los campos clave, el sistema no abre el ticket.\nSi el reporte mensual llega a fin de mes, el agente agrupa los datos en 30 segundos y se lo deja listo al consultor para que solo escriba sus conclusiones.\n\nTu talento senior debe estar vendiendo, resolviendo y pensando. No haciendo malabares con herramientas desconectadas.\n\nDesliza para ver la anatomía de una agencia sistematizada.\n\nSi quieres auditar dónde se están perdiendo las horas de tu equipo este mes, comenta \"MARGEN\" y te enviamos la guía de diagnóstico."
+}

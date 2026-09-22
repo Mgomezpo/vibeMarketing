@@ -1,0 +1,134 @@
+{
+  "id": "01-arbitraje-nomina",
+  "title": "Arbitraje de Capital vs. Nómina Tradicional",
+  "pillar": "Pilar D",
+  "theme": "capital-arbitrage",
+  "slides": [
+    {
+      "slide_number": "01",
+      "type": "cover",
+      "top_tag": "ANÁLISIS OPERATIVO B2B  ·  01 / 05",
+      "title_serif": "CONTRATAR MÁS",
+      "title_sans": "NO ARREGLA EL CAOS",
+      "subtitle": "El primer impulso al crecer suele ser contratar asistentes o coordinadores para absorber trabajo repetitivo. <span class=\"gold-text\">La nómina no resuelve un proceso roto</span>: solo lo hace más costoso.",
+      "footer_left": "ARBITRAJE DE CAPITAL & OPERACIONES",
+      "footer_right": "DESLIZA →",
+      "bg_image": "slide_01.jpg"
+    },
+    {
+      "slide_number": "02",
+      "type": "split",
+      "top_tag": "02 / 05  ·  EL SÍNTOMA",
+      "title_serif": "CONTRATAS TALENTO CALIFICADO",
+      "title_sans": "Y TERMINA HACIENDO COPY-PASTE",
+      "subtitle": "Muchos puestos operativos terminan convertidos en puentes humanos entre herramientas que no se comunican.",
+      "col_left": {
+        "tag": "01 · LA EXPECTATIVA",
+        "title": "Despejar Tiempo Estratégico",
+        "body": "Contratas un perfil para que gestione cuentas o lidere proyectos. Esperas que aporte criterio, análisis y criterio propio desde las primeras semanas.",
+        "stat_num": "90 días",
+        "stat_desc": "DE INDUCCIÓN PARA VER AUTONOMÍA",
+        "stat_type": "negative"
+      },
+      "col_right": {
+        "tag": "02 · LA REALIDAD COTIDIANA",
+        "title": "Triage Manual Continuo",
+        "body": "Pasa más de la mitad del día persiguiendo archivos en WhatsApp, volcando correos a un Excel y avisando a otros que revisen una tarea.",
+        "stat_num": "60%",
+        "stat_desc": "DEL DÍA EN TAREAS PURAMENTE MECÁNICAS",
+        "stat_type": "gold"
+      },
+      "footer_left": "ANÁLISIS DE PUESTOS OPERATIVOS // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_02.jpg"
+    },
+    {
+      "slide_number": "03",
+      "type": "compare",
+      "top_tag": "03 / 05  ·  EL ARBITRAJE",
+      "title_serif": "LA NÓMINA TIENE COSTOS INVISIBLES.",
+      "title_sans": "UN SISTEMA NO.",
+      "quote": "«Si un proceso se puede describir con reglas lógicas claras, poner a una persona a ejecutarlo manualmente todos los días es una fuga permanente de recursos.»",
+      "col_left": {
+        "title": "Coordinador Tradicional (Nómina)",
+        "badge": "COSTO FIJO",
+        "items": [
+          "Sueldos, impuestos, cargas sociales y equipo",
+          "Curva de aprendizaje de 60 a 90 días para ser autónomo",
+          "Si renuncia, el proceso se pierde con la persona",
+          "Limitado a 8 horas: fuera de horario todo se frena",
+          "Inconsistencia humana según atención, fatiga o prisa"
+        ]
+      },
+      "col_right": {
+        "title": "Cluster Agéntico TIA (Infraestructura)",
+        "badge": "ACTIVO DETERMINISTA",
+        "items": [
+          "Tarifa fija de infraestructura sin pasivos laborales",
+          "Despliegue rápido sobre las herramientas que ya usas",
+          "El proceso queda documentado en código de tu empresa",
+          "Disponibilidad 24/7/365 sin pausas ni demoras",
+          "Cero variabilidad: ejecuta la regla exacta cada vez"
+        ]
+      },
+      "footer_left": "ESTRUCTURA DE CAPITAL Y OPERACIONES // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_03.jpg"
+    },
+    {
+      "slide_number": "04",
+      "type": "steps",
+      "top_tag": "04 / 05  ·  LA TRANSICIÓN",
+      "title_serif": "NO SE TRATA DE ELIMINAR EQUIPO.",
+      "title_sans": "ES QUITARLES LO MECÁNICO.",
+      "subtitle": "Cómo se redistribuye la carga de trabajo entre humanos y agentes digitales:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "La Capa Agéntica asume la Fricción Repetitiva",
+          "body": "Recepción de solicitudes, validación de datos completos, extracción de información de documentos y actualización del CRM o gestor.",
+          "highlight": false
+        },
+        {
+          "num": "02",
+          "title": "Compuerta Determinista de Validación",
+          "body": "Si una entrada viene incompleta o con errores, el agente solicita lo faltante de forma automática. Ningún humano pierde tiempo revisando datos rotos.",
+          "highlight": true
+        },
+        {
+          "num": "03",
+          "title": "Tu Equipo solo entra a Decisiones Estratégicas",
+          "body": "Tus colaboradores de alto nivel solo intervienen cuando se requiere creatividad, negociación, criterio experto o relaciones con clientes.",
+          "highlight": false
+        }
+      ],
+      "footer_left": "ARQUITECTURA DE TRABAJO COMPARTIDO // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_04.jpg"
+    },
+    {
+      "slide_number": "05",
+      "type": "cta",
+      "top_tag": "05 / 05  ·  SIGUIENTE PASO",
+      "title_serif": "DEJA DE RESOLVER PROBLEMAS DE SISTEMAS",
+      "title_sans": "CON MÁS NÓMINA",
+      "metrics": [
+        {
+          "num": "0 DÍAS",
+          "desc": "DE INDUCCIÓN RECURRENTE AL ESCALAR"
+        },
+        {
+          "num": "24/7",
+          "desc": "EJECUCIÓN INMEDIATA SIN CUELLOS DE BOTELLA"
+        }
+      ],
+      "cta_badge": "DIAGNÓSTICO OPERATIVO",
+      "cta_title": "Comenta \"NÓMINA\"",
+      "cta_desc": "Revisamos tu flujo operativo actual y te mostramos qué tareas mecánicas de tu equipo pueden ser asumidas por un agente digital este mismo mes.",
+      "footer_left": "THE INSIGHTFUL ARROW // INFRAESTRUCTURA B2B",
+      "footer_right": "@THEINSIGHTFULARROW",
+      "bg_image": "slide_05.jpg"
+    }
+  ],
+  "caption": "El primer impulso cuando una agencia o empresa de servicios empieza a crecer es contratar:\n\n\"Necesitamos otro asistente.\"\n\"Necesitamos un coordinador para ordenar los proyectos.\"\n\n90 días después, la nómina creció, pero el desorden sigue idéntico.\nSolo que ahora cuesta el doble mantenerlo.\n\nLa mayoría de puestos operativos no tienen un problema de talento. Tienen un problema de arquitectura:\nEstán usando tiempo humano de alto costo para hacer de puente entre herramientas que no se hablan entre sí (mover datos de un correo a un Excel, perseguir briefs en WhatsApp, recordar entregas).\n\nSi una tarea sigue una regla lógica repetitiva, resolverla con nómina es una decisión financiera ineficiente:\n→ Tiene pasivos laborales.\n→ Se frena fuera de horario laboral.\n→ Y cuando la persona renuncia, el conocimiento se va con ella.\n\nLos sistemas agénticos absorben el 100% de esa fricción mecánica:\nTrabajan 24/7, no se cansan, no cometen errores de tipeo y documentan el proceso en la infraestructura de tu empresa.\n\nTu equipo humano no debería estar haciendo copy-paste.\nDebería estar pensando, negociando y creando.\n\nDesliza el carrusel para ver la comparativa completa.\n\nSi quieres auditar qué tareas repetitivas de tu operación actual pueden ser asumidas por un agente digital este mismo mes, comenta \"NÓMINA\" y te enviamos el diagnóstico."
+}

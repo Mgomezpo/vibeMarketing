@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TIA — Auditoría Operativa B2B: Fricción No Facturable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #000000;
+    color: #E8E0D0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* CANVAS SLIDE NATIVO 4:5 */
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+    padding: 70px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #141414;
+  }
+
+  /* IMAGEN DE FONDO CINEMÁTICA CON ANCLAJE INFERIOR */
+  .slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: 78% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .slide-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  /* CABECERA EDITORIAL SUIZA */
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 22px;
+  }
+  .header-brand {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #F0B429;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .header-brand::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #F0B429;
+    display: inline-block;
+  }
+  .header-step {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    color: #888888;
+    text-transform: uppercase;
+  }
+
+  /* PIE TÉCNICO */
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 22px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: #777777;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+  .footer-cta {
+    color: #F0B429;
+    font-weight: 700;
+  }
+
+  /* TIPOGRAFÍA PURA / COLORES */
+  .gold-text { color: #F0B429; }
+  .section-title-wrap { margin-top: 20px; }
+  .headline-serif {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+  .headline-sans {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #F0B429;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .section-lead {
+    font-size: 18px;
+    line-height: 1.45;
+    color: #A09A90;
+    margin-top: 10px;
+    max-width: 850px;
+  }
+
+  /* SLIDE 01: COVER */
+  .masthead { margin-top: 24px; }
+  .masthead-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 16px;
+  }
+  .masthead-serif {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    max-width: 620px;
+  }
+  .masthead-sans {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: #F0B429;
+    text-transform: uppercase;
+    margin-top: 8px;
+    max-width: 620px;
+  }
+  .cover-subtitle {
+    font-size: 20px;
+    line-height: 1.45;
+    color: #D0C8B8;
+    max-width: 520px;
+    margin-top: 32px;
+  }
+
+  /* SLIDE 02: SPLIT */
+  .split-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 24px;
+    max-width: 960px;
+  }
+  .split-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .split-col.right-col {
+    border-left: 1px solid rgba(240, 180, 41, 0.25);
+    padding-left: 36px;
+  }
+  .col-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888888;
+    margin-bottom: 10px;
+  }
+  .col-tag.gold { color: #F0B429; }
+  .col-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .col-body {
+    font-size: 16px;
+    line-height: 1.45;
+    color: #C0BCB4;
+  }
+  .col-stat {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 1;
+    color: #F0B429;
+  }
+  .stat-num.negative { color: #E05252; }
+  .stat-desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #888888;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* SLIDE 03: COMPARE */
+  .quote-container {
+    border-left: 3px solid #F0B429;
+    padding-left: 18px;
+    margin: 14px 0 18px;
+  }
+  .quote-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.35;
+    color: #FFFFFF;
+    max-width: 840px;
+  }
+  .compare-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .compare-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .compare-col.pro {
+    border-left: 1px solid rgba(240, 180, 41, 0.25);
+    padding-left: 36px;
+  }
+  .compare-header {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .compare-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #777777;
+  }
+  .compare-col.pro .compare-badge { color: #F0B429; }
+  .compare-item {
+    font-size: 14px;
+    line-height: 1.35;
+    color: #B0ABA0;
+    position: relative;
+    padding-left: 22px;
+  }
+  .compare-item::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #E05252;
+    font-weight: 700;
+  }
+  .compare-col.pro .compare-item { color: #E8E0D0; }
+  .compare-col.pro .compare-item::before {
+    content: "✓";
+    color: #F0B429;
+  }
+
+  /* SLIDE 04: STEPS */
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .step-row {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .step-row:last-child { border-bottom: none; }
+  .step-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: #555555;
+    line-height: 1;
+  }
+  .step-row.highlight .step-number { color: #F0B429; }
+  .step-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+  }
+  .step-row.highlight .step-title { color: #F0B429; }
+  .step-body {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #A09A90;
+  }
+  .step-row.highlight .step-body { color: #E8E0D0; }
+
+  /* SLIDE 05: CTA */
+  .cta-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 36px 0 44px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .cta-metric-item { display: flex; flex-direction: column; }
+  .cta-metric-val {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 1;
+    color: #F0B429;
+    margin-bottom: 8px;
+  }
+  .cta-metric-desc {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888888;
+    line-height: 1.4;
+  }
+  .cta-action-wrap { max-width: 820px; }
+  .cta-tag-badge {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #F0B429;
+    margin-bottom: 12px;
+  }
+  .cta-main-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 46px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .cta-main-desc {
+    font-size: 19px;
+    line-height: 1.5;
+    color: #B8B2A6;
+  }
+
+  @page {
+    size: 1080px 1350px;
+    margin: 0;
+  }
+  @media print {
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+      gap: 0 !important;
+      background: #000000 !important;
+    }
+    .slide {
+      border: none !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+
+  <!-- SLIDE 01 -->
+  <section class="slide" id="slide-01">
+    <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_01.jpg');"></div>
+    <div class="slide-content">
+      <div class="header-row">
+        <div class="header-brand">THE INSIGHTFUL ARROW</div>
+        <div class="header-step">AUDITORÍA OPERATIVA B2B  ·  01 / 05</div>
+      </div>
+
+      <div class="slide-main-content">
+        
+      <div class="masthead-group">
+        <div class="masthead">
+          <div class="masthead-tag">AUDITORÍA OPERATIVA B2B  ·  01 / 05</div>
+          <div class="masthead-serif">EL TIEMPO NO FACTURABLE</div>
+          <div class="masthead-sans">ESTÁ DEVORANDO TU MARGEN</div>
+        </div>
+        <div class="cover-subtitle">Tus mejores consultores y directores no están quemados por el trabajo de clientes. <span class="gold-text">Están quemados por la burocracia invisible</span> y el desorden operativo de tu propia agencia.</div>
+      </div>
+      <div></div>
+    
+      </div>
+
+      <div class="footer-row">
+        <span>RENTABILIDAD & OPERACIONES // TIA</span>
+        <span class="footer-cta">DESLIZA →</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- SLIDE 02 -->
+  <section class="slide" id="slide-02">
+    <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_02.jpg');"></div>
+    <div class="slide-content">
+      <div class="header-row">
+        <div class="header-brand">THE INSIGHTFUL ARROW</div>
+        <div class="header-step">02 / 05  ·  LA FUGA INVISIBLE</div>
+      </div>
+
+      <div class="slide-main-content">
+        
+      <div>
+        <div class="section-title-wrap">
+          <div class="headline-serif">VENDES 160 HORAS AL MES</div>
+          <div class="headline-sans">PERO SÓLO FACTURAS 70</div>
+        </div>
+        <p class="section-lead">Dónde se disuelve la rentabilidad real del talento senior en empresas de servicios profesionales:</p>
+      </div>
+
+      <div class="split-columns">
+        <div class="split-col">
+          <div>
+            <div class="col-tag">01 · TRABAJO FACTURABLE REAL</div>
+            <div class="col-title">Estrategia y Criterio de Alto Valor</div>
+            <div class="col-body">El trabajo por el que el cliente paga: análisis profundo, toma de decisiones, desarrollo de entregables y resolución creativa de problemas.</div>
+          </div>
+          <div class="col-stat">
+            <div class="stat-num ">45%</div>
+            <div class="stat-desc">DEL TIEMPO SEMANAL EFECTIVAMENTE FACTURADO</div>
+          </div>
+        </div>
+
+        <div class="split-col right-col">
+          <div>
+            <div class="col-tag gold">02 · EL AGUJERO NEGRO</div>
+            <div class="col-title">Fricción de Coordinación Interna</div>
+            <div class="col-body">Buscar archivos en Drive, perseguir accesos por WhatsApp, armar reportes manuales en slides y recordar entregas internas pendientes.</div>
+          </div>
+          <div class="col-stat">
+            <div class="stat-num negative">55%</div>
+            <div class="stat-desc">DE LA JORNADA CONSUMIDA EN GESTIÓN NO MONETIZABLE</div>
+          </div>
+        </div>
+      </div>
+    
+      </div>
+
+      <div class="footer-row">
+        <span>AUDITORÍA DE RENTABILIDAD // TIA</span>
+        <span class="footer-cta">SIGUIENTE →</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- SLIDE 03 -->
+  <section class="slide" id="slide-03">
+    <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_03.jpg');"></div>
+    <div class="slide-content">
+      <div class="header-row">
+        <div class="header-brand">THE INSIGHTFUL ARROW</div>
+        <div class="header-step">03 / 05  ·  EL DIAGNÓSTICO</div>
+      </div>
+
+      <div class="slide-main-content">
+        
+      <div>
+        <div class="section-title-wrap">
+          <div class="headline-serif">EL PROBLEMA NO ES LA CARGA DE CLIENTES.</div>
+          <div class="headline-sans">ES LA FALTA DE PROTOCOLO.</div>
+        </div>
+        
+          <div class="quote-container">
+            <div class="quote-text">«Cuando el onboarding de un cliente depende de 20 mensajes informales de WhatsApp, cada nuevo contrato multiplica el caos interno en vez de multiplicar el beneficio.»</div>
+          </div>
+        
+      </div>
+
+      <div class="compare-columns">
+        <div class="compare-col">
+          <div class="compare-header">
+            <span>La Agencia Tradicional (Fricción)</span>
+            <span class="compare-badge">DESORDEN ESTRUCTURAL</span>
+          </div>
+          <div class="compare-item">Briefs incompletos que exigen 3 reuniones de aclaración</div><div class="compare-item">Reportes de rendimiento armados a mano en presentaciones</div><div class="compare-item">El director actúa como cuello de botella para aprobar todo</div><div class="compare-item">Horas no facturadas tratando de apagar incendios urgentes</div><div class="compare-item">Sensación de saturación crónica a pesar de tener equipo</div>
+        </div>
+
+        <div class="compare-col pro">
+          <div class="compare-header">
+            <span class="gold-text">La Agencia Sistematizada (TIA)</span>
+            <span class="compare-badge">INFRAESTRUCTURA DE ALTO MARGEN</span>
+          </div>
+          <div class="compare-item">Compuertas deterministas que rechazan briefs incompletos</div><div class="compare-item">Consolidación de métricas y generación de reportes en segundos</div><div class="compare-item">Pre-validación automática de entregables antes de revisión senior</div><div class="compare-item">Capacidad de duplicar clientes sin duplicar nómina operativa</div><div class="compare-item">Márgenes netos protegidos y equipo enfocado en estrategia</div>
+        </div>
+      </div>
+    
+      </div>
+
+      <div class="footer-row">
+        <span>EFICIENCIA OPERATIVA // TIA</span>
+        <span class="footer-cta">SIGUIENTE →</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- SLIDE 04 -->
+  <section class="slide" id="slide-04">
+    <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_04.jpg');"></div>
+    <div class="slide-content">
+      <div class="header-row">
+        <div class="header-brand">THE INSIGHTFUL ARROW</div>
+        <div class="header-step">04 / 05  ·  EL PLAN DE ACCIÓN</div>
+      </div>
+
+      <div class="slide-main-content">
+        
+      <div>
+        <div class="section-title-wrap">
+          <div class="headline-serif">TRES PASOS PARA BLINDAR</div>
+          <div class="headline-sans">LA CAPACIDAD DE TU EQUIPO</div>
+        </div>
+        <p class="section-lead">Cómo erradicar la fricción no facturable sin traumatizar la operación diaria:</p>
+      </div>
+
+      <div class="steps-list">
+        
+      <div class="step-row ">
+        <div class="step-number">01</div>
+        <div class="step-details">
+          <div class="step-title">Auditoría de Micro-Fricciones</div>
+          <div class="step-body">Mapeamos con precisión milimétrica cuántas horas semanales invierte cada rol en tareas repetitivas que no requieren criterio humano.</div>
+        </div>
+      </div>
+    
+      <div class="step-row highlight">
+        <div class="step-number">02</div>
+        <div class="step-details">
+          <div class="step-title">Estandarización de Compuertas de Entrada</div>
+          <div class="step-body">Ningún proyecto arranca con datos rotos. Un agente valida accesos, marcas y entregables requeridos de forma inmediata.</div>
+        </div>
+      </div>
+    
+      <div class="step-row ">
+        <div class="step-number">03</div>
+        <div class="step-details">
+          <div class="step-title">Automatización de Triage y Reportes</div>
+          <div class="step-body">El sistema sintetiza métricas y genera borradores de informe automáticamente para que el consultor solo añada el análisis estratégico.</div>
+        </div>
+      </div>
+    
+      </div>
+    
+      </div>
+
+      <div class="footer-row">
+        <span>PROTOCOLO DE DESPLIEGUE // TIA</span>
+        <span class="footer-cta">SIGUIENTE →</span>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- SLIDE 05 -->
+  <section class="slide" id="slide-05">
+    <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_05.jpg');"></div>
+    <div class="slide-content">
+      <div class="header-row">
+        <div class="header-brand">THE INSIGHTFUL ARROW</div>
+        <div class="header-step">05 / 05  ·  SIGUIENTE PASO</div>
+      </div>
+
+      <div class="slide-main-content">
+        
+      <div>
+        <div class="section-title-wrap">
+          <div class="headline-serif">RECUPERA EL MARGEN</div>
+          <div class="headline-sans">QUE TU EQUIPO ESTÁ REGALANDO</div>
+        </div>
+      </div>
+
+      <div class="cta-metrics">
+        
+      <div class="cta-metric-item">
+        <div class="cta-metric-val">+35%</div>
+        <div class="cta-metric-desc">HORAS FACTURABLES RECUPERADAS POR CONSULTOR</div>
+      </div>
+    
+      <div class="cta-metric-item">
+        <div class="cta-metric-val">1 SEMANA</div>
+        <div class="cta-metric-desc">PARA IMPLEMENTAR LA PRIMERA COMPUERTA</div>
+      </div>
+    
+      </div>
+
+      <div class="cta-action-wrap">
+        <div class="cta-tag-badge">AUDITORÍA OPERATIVA B2B</div>
+        <div class="cta-main-title">Comenta "MARGEN"</div>
+        <div class="cta-main-desc">Analizamos tu estructura de entregables y detectamos exactamente dónde se están fugando las horas no facturables de tus consultores más costosos.</div>
+      </div>
+    
+      </div>
+
+      <div class="footer-row">
+        <span>THE INSIGHTFUL ARROW // INFRAESTRUCTURA B2B</span>
+        <span class="footer-cta">@THEINSIGHTFULARROW</span>
+      </div>
+    </div>
+  </section>
+  
+
+</body>
+</html>

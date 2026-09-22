@@ -1,0 +1,134 @@
+{
+  "id": "02-ia-hype-vs-arquitectura",
+  "title": "Desmantelando el Hype de la IA vs Arquitectura Agéntica",
+  "pillar": "Pilar B",
+  "theme": "ai-hype-vs-systems",
+  "slides": [
+    {
+      "slide_number": "01",
+      "type": "cover",
+      "top_tag": "ARQUITECTURA AGÉNTICA B2B  ·  01 / 05",
+      "title_serif": "UN BOT DE CHAT",
+      "title_sans": "NO ES INFRAESTRUCTURA",
+      "subtitle": "Pagar licencias de ChatGPT o poner un bot en Slack no es transformar tu empresa. <span class=\"gold-text\">Los prompts sin compuertas deterministas</span> solo generan caos, alucinaciones y fricción en tu equipo.",
+      "footer_left": "DESMANTELANDO EL HYPE // TIA",
+      "footer_right": "DESLIZA →",
+      "bg_image": "slide_01.jpg"
+    },
+    {
+      "slide_number": "02",
+      "type": "split",
+      "top_tag": "02 / 05  ·  LA TRAMPA DEL WRAPPER",
+      "title_serif": "POR QUÉ EL 80% DE PILOTOS DE IA",
+      "title_sans": "MUEREN EN POCAS SEMANAS",
+      "subtitle": "La diferencia entre experimentar con prompts y construir software agéntico listo para producción:",
+      "col_left": {
+        "tag": "01 · EL EXPERIMENTO TÍPICO",
+        "title": "Chatbots Probabilísticos",
+        "body": "Se le pide a un modelo que 'clasifique solicitudes' o 'atienda clientes' sin validar esquemas ni controlar fallos silenciosos.",
+        "stat_num": "80%",
+        "stat_desc": "DE FALLO EN TAREAS MULTIPASO SIN GUARDRAILS",
+        "stat_type": "negative"
+      },
+      "col_right": {
+        "tag": "02 · EL ESTÁNDAR B2B",
+        "title": "Sistemas Deterministas",
+        "body": "El modelo razona y extrae datos, pero las acciones, llamadas a API y escrituras en base de datos siguen contratos matemáticos de código.",
+        "stat_num": "0%",
+        "stat_desc": "ALUCINACIONES EN ACCIONES DE NEGOCIO",
+        "stat_type": "gold"
+      },
+      "footer_left": "ARQUITECTURA DE SOFTWARE // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_02.jpg"
+    },
+    {
+      "slide_number": "03",
+      "type": "compare",
+      "top_tag": "03 / 05  ·  EL PRINCIPIO TÉCNICO",
+      "title_serif": "LA IA PROPONE.",
+      "title_sans": "EL CÓDIGO GOBIERNA.",
+      "quote": "«Una empresa seria jamás le entrega el control de sus operaciones a un modelo no determinista. La IA procesa lenguaje; el software valida y ejecuta.»",
+      "col_left": {
+        "title": "El Enfoque 'AI-Bro' (Frágil)",
+        "badge": "VULNERABLE",
+        "items": [
+          "Prompts gigantescos rezando para que el LLM no falle",
+          "Sin validación de esquemas JSON ni tipos de datos",
+          "Caja negra: nadie sabe por qué tomó una decisión errónea",
+          "Falla silenciosa cuando el cliente escribe con faltas",
+          "Datos sensibles expuestos en interfaces web públicas"
+        ]
+      },
+      "col_right": {
+        "title": "Capa Agéntica Determinista (TIA)",
+        "badge": "GRADO DE INGENIERÍA",
+        "items": [
+          "Micro-prompts modulares de una sola responsabilidad",
+          "Compuertas estrictas de validación de datos (Zod/JSON Schema)",
+          "Telemetría completa: auditoría de cada tool call y respuesta",
+          "Fallback instantáneo a humanos ante cualquier anomalía",
+          "Infraestructura privada y cifrada propiedad de tu empresa"
+        ]
+      },
+      "footer_left": "GOBERNANZA DE SISTEMAS // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_03.jpg"
+    },
+    {
+      "slide_number": "04",
+      "type": "steps",
+      "top_tag": "04 / 05  ·  EL PROTOCOLO",
+      "title_serif": "TRES NIVELES DE CONTROL",
+      "title_sans": "PARA DELEGAR CON SEGURIDAD",
+      "subtitle": "Cómo blindamos las operaciones para que un agente nunca tome una decisión fuera de protocolo:",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Normalización y Tipado Estricto",
+          "body": "El agente ingesta mensajes desordenados, audios o correos y los transforma en estructuras JSON con validación rigurosa de campos.",
+          "highlight": false
+        },
+        {
+          "num": "02",
+          "title": "Compuerta de Aprobación Humana (HITL)",
+          "body": "En decisiones críticas (pagos, envíos masivos o firmas), el agente prepara la acción y requiere la confirmación explícita de un humano.",
+          "highlight": true
+        },
+        {
+          "num": "03",
+          "title": "Ejecución Idempotente y Logs Auditables",
+          "body": "Si una API externa falla, el sistema reintenta con seguridad sin duplicar registros, dejando una bitácora forense de cada evento.",
+          "highlight": false
+        }
+      ],
+      "footer_left": "PROTOCOLOS AGÉNTICOS // TIA",
+      "footer_right": "SIGUIENTE →",
+      "bg_image": "slide_04.jpg"
+    },
+    {
+      "slide_number": "05",
+      "type": "cta",
+      "top_tag": "05 / 05  ·  SIGUIENTE PASO",
+      "title_serif": "CONVIERTE EXPERIMENTOS AISLADOS",
+      "title_sans": "EN INFRAESTRUCTURA DE PRODUCCIÓN",
+      "metrics": [
+        {
+          "num": "99.8%",
+          "desc": "PRECISIÓN DETERMINISTA EN EJECUCIÓN"
+        },
+        {
+          "num": "100%",
+          "desc": "TRAZABILIDAD Y REGISTRO AUDITABLE"
+        }
+      ],
+      "cta_badge": "EVALUACIÓN DE ARQUITECTURA",
+      "cta_title": "Comenta \"SISTEMAS\"",
+      "cta_desc": "Auditamos tus flujos de trabajo actuales y te mostramos cómo transformar procesos manuales en sistemas agénticos con validación matemática.",
+      "footer_left": "THE INSIGHTFUL ARROW // INFRAESTRUCTURA B2B",
+      "footer_right": "@THEINSIGHTFULARROW",
+      "bg_image": "slide_05.jpg"
+    }
+  ],
+  "caption": "El 90% de las empresas que dicen que \"están probando IA\" están cometiendo el mismo error:\n\nCompran 10 cuentas de ChatGPT, instalan un bot básico en Slack o conectan una plantilla genérica de Make.\n\n30 días después:\n→ El bot alucina datos frente a un cliente.\n→ Nadie confía en las respuestas del sistema.\n→ Los empleados vuelven a hacer todo a mano.\n\nPoner un modelo probabilístico en el centro de tu operación sin compuertas de validación deterministas no es innovación: es negligencia operativa.\n\nEn The Insightful Arrow aplicamos una regla inquebrantable:\n\"La IA propone. El código gobierna.\"\n\nLos LLMs son excepcionales para razonar y entender texto desestructurado. Pero jamás deben escribir en tu CRM, emitir facturas ni enviar correos sin contratos de validación de datos estrictos (JSON Schema) y compuertas de supervisión humana.\n\nDesliza para ver la anatomía de un sistema agéntico determinista.\n\nSi quieres evaluar la viabilidad técnica de automatizar tus flujos internos con infraestructura real, comenta \"SISTEMAS\" y te enviamos la auditoría."
+}

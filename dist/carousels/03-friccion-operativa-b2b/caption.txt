@@ -1,0 +1,22 @@
+Pregunta incómoda para dueños de agencias y firmas de consultoría:
+
+De las 40 horas que trabaja tu director de cuentas a la semana, ¿cuántas se le pueden facturar de verdad a un cliente?
+
+En la mayoría de firmas de servicios, la respuesta real no supera el 45%.
+
+El resto del tiempo se lo traga la burocracia interna:
+→ Perseguir clientes por WhatsApp porque enviaron el brief incompleto.
+→ Armar reportes mensuales de PowerPoint copiando y pegando métricas de Meta y Google.
+→ Reenviar correos para recordar entregables que deberían estar automatizados.
+
+Contratar más coordinadores no soluciona esto: solo reparte el desorden entre más sueldos.
+
+La solución es poner compuertas de software deterministas:
+Si el cliente no completa los campos clave, el sistema no abre el ticket.
+Si el reporte mensual llega a fin de mes, el agente agrupa los datos en 30 segundos y se lo deja listo al consultor para que solo escriba sus conclusiones.
+
+Tu talento senior debe estar vendiendo, resolviendo y pensando. No haciendo malabares con herramientas desconectadas.
+
+Desliza para ver la anatomía de una agencia sistematizada.
+
+Si quieres auditar dónde se están perdiendo las horas de tu equipo este mes, comenta "MARGEN" y te enviamos la guía de diagnóstico.

@@ -1,0 +1,19 @@
+El 90% de las empresas que dicen que "están probando IA" están cometiendo el mismo error:
+
+Compran 10 cuentas de ChatGPT, instalan un bot básico en Slack o conectan una plantilla genérica de Make.
+
+30 días después:
+→ El bot alucina datos frente a un cliente.
+→ Nadie confía en las respuestas del sistema.
+→ Los empleados vuelven a hacer todo a mano.
+
+Poner un modelo probabilístico en el centro de tu operación sin compuertas de validación deterministas no es innovación: es negligencia operativa.
+
+En The Insightful Arrow aplicamos una regla inquebrantable:
+"La IA propone. El código gobierna."
+
+Los LLMs son excepcionales para razonar y entender texto desestructurado. Pero jamás deben escribir en tu CRM, emitir facturas ni enviar correos sin contratos de validación de datos estrictos (JSON Schema) y compuertas de supervisión humana.
+
+Desliza para ver la anatomía de un sistema agéntico determinista.
+
+Si quieres evaluar la viabilidad técnica de automatizar tus flujos internos con infraestructura real, comenta "SISTEMAS" y te enviamos la auditoría.
