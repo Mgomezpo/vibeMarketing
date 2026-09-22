@@ -1,66 +1,62 @@
-# 🤖 TIA Carousel Agent Protocol (The Operational Blueprint)
+# 🤖 TIA Carousel Agent Protocol (Productizable Edition)
 
-This document is the **sole instructional source of truth** for any AI agent producing carousels for The Insightful Arrow. When the user says "I need a carousel for [Topic]", the agent must execute this blueprint without asking for aesthetic preferences or layout guidance.
+This document is the **Operational Blueprint** for the Carousel Engine. It is designed to be agnostic and productizable, allowing the system to be deployed for any brand by simply swapping the design tokens and moodboard.
 
 ## 🎯 1. The Mission
-Transform a raw business thesis into a high-end, luxury editorial carousel. The goal is **"Clinical Precision"**: no marketing fluff, no "AI slop", and absolute visual consistency.
+Transform a business thesis into a high-end, editorial carousel. The agent must act as a production bridge between a strategic thesis and a final render, ensuring absolute consistency with the provided brand identity.
 
 ---
 
 ## 🛠️ 2. The Execution Pipeline (Step-by-Step)
 
-The agent must follow this exact sequence. **Do not skip steps. Do not ask for stylistic confirmation.**
+The agent must follow this sequence without asking for stylistic or aesthetic confirmation.
 
 ### Step 1: Strategic Copywriting (The Script)
-- **Input:** The topic/thesis provided by the user.
-- **Tono:** "Founder-to-Founder" / "COO-to-COO". Cold, clinical, sober, direct.
+- **Input:** Topic/Thesis + Brand Tone (defined in knowledge base).
 - **Action:** Create a 5-slide structure.
-- **Constraint:** Zero "reche" (no "unlock your potential", no "magic formulas"). Use operational reality (costs, friction, architecture).
+- **Constraint:** Zero marketing fluff. Use a professional, sober, and clinical tone.
 - **Output:** Populate `config/carousels/[id].json`.
 
 ### Step 2: Multimodal Visual Generation (The Art)
-- **Input:** The JSON slides + `/moodboards/` folder.
+- **Input:** The JSON slides + `moodboards/` folder + `design_tokens.json`.
 - **Action:** Call the Image API for each slide.
-- **Injection Rule:** **Mandatory** injection of ALL assets in `/moodboards/` as reference images.
-- **Prompt Formula:** `[Moodboard Refs] + [Scene Description] + [Composition: Subject Bottom 40% / Obsidian Void Top 60%] + [Materials: Carrara Marble / Liquid Gold]`.
+- **Injection Rule:** Inject **ALL** assets found in the `/moodboards` folder as reference images.
+- **Prompt Formula:** `[Moodboard Refs] + [Scene Description] + [Composition: Subject Position as per design_tokens] + [Material/Style Tokens]`.
+- **Resilience:** The system uses a fallback chain (Primary $\rightarrow$ Fallback 1 $\rightarrow$ Fallback 2) to ensure delivery regardless of API limits.
 - **Output:** Save images to `assets/carousels/[id]/`.
 
 ### Step 3: System Compilation (The Render)
 - **Action:** Execute `node scripts/compiler.cjs`.
-- **Validation:** Ensure the script reads the JSON and uses the generated images.
+- **Logic:** The compiler injects `design_tokens.json` into the CSS variables of the template.
 - **Output:** PDF and PNGs in `dist/carousels/[id]/`.
 
 ### Step 4: State Update (The Memory)
 - **Action:** Update `HANDOFF.md`.
-- **Log:** Mark the project as completed, note any specific design tweaks made, and update the "Current Status" checklist.
+- **Log:** Mark completion, note specific iterations, and update the current status.
 
 ---
 
-## 🎨 3. The "No-Ask" Design Contract
-The agent already knows the style. **Do not ask the user about these; simply apply them:**
+## 🎨 3. Design Implementation (Agnostic)
+The agent does not "decide" the style; it **implements** the configuration:
 
-- **Visuals:** Brutalist Luxury. Marble and Gold emerging from an obsidian void (`#000000`).
-- **Typography:** 
-  - `Fraunces` (Italic Serif) for impact.
-  - `Space Grotesk` (Bold Sans) for statements.
-  - `Space Mono` for technical data.
-  - `Inter` for body text.
-- **Layout:** "Naked Typography". **Zero containers, zero blurs, zero borders.** Text floats directly on the black void.
-- **Composition:** Background-First. The top 60% of the canvas must be empty to accommodate the text.
+1. **Colors & Fonts:** Always pull from `design_tokens.json`.
+2. **Visual Vibe:** Derived entirely from the images in the `/moodboards` folder.
+3. **Layout:** "Naked Typography". No containers, no blurs, no borders. Text floats on the background.
+4. **Composition:** Follow the `composition` rules in `design_tokens.json` (e.g., subject anchor and void percentage).
 
 ---
 
-## 🚫 4. Absolute Red Lines (Anti-Patterns)
-- **NO** asking "What style do you want?". (The style is defined here).
-- **NO** asking "What colors should I use?". (Tokens: `#000000`, `#FFFFFF`, `#F0B429`).
-- **NO** adding "marketing-speak" to the copy.
-- **NO** using boxes, grids, or semi-transparent backgrounds in the HTML.
+## 🚫 4. Absolute Red Lines
+- **NO** asking "What style/colors do you prefer?". (Use the tokens and moodboard).
+- **NO** adding UI elements (cards, boxes, shadows) to the HTML.
+- **NO** using generic AI-generated text/descriptions inside the images.
+- **NO** skipping the reference injection in API calls.
 
 ---
 
 ## ✅ 5. Definition of Done
-A task is only "Done" when:
-1. The JSON is saved in `config/`.
-2. The Images are saved in `assets/`.
-3. The PDF is generated in `dist/`.
-4. The `HANDOFF.md` is updated.
+A task is "Done" only when:
+1. JSON is saved in `config/`.
+2. Images are saved in `assets/`.
+3. PDF is generated in `dist/`.
+4. `HANDOFF.md` is updated.

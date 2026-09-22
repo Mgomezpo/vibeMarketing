@@ -2,17 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TIA — Auditoría Operativa B2B: Fricción No Facturable</title>
+<title>TIA — Carousel Engine Deck</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --bg-color: #000000;
+    --primary-text: #FFFFFF;
+    --secondary-text: #E8E0D0;
+    --accent-color: #F0B429;
+    --muted-color: #888888;
+    --negative-color: #E05252;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --font-serif: 'Fraunces', serif;
+    --font-sans: 'Space Grotesk', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    background: #000000;
-    color: #E8E0D0;
-    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--secondary-text);
+    font-family: var(--font-body), sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,14 +38,16 @@
   .slide {
     width: 1080px;
     height: 1350px;
-    background-color: #000000;
+    background-color: var(--bg-color);
     position: relative;
     overflow: hidden;
     padding: 70px 64px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid #141414;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    page-break-after: always;
+    break-after: page;
   }
 
   /* IMAGEN DE FONDO CINEMÁTICA CON ANCLAJE INFERIOR */
@@ -61,36 +76,37 @@
     align-items: stretch;
   }
 
-  /* CABECERA EDITORIAL SUIZA */
+  /* CABECERA EDITORIAL */
   .header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-subtle);
     padding-bottom: 22px;
   }
   .header-brand {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 13px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #F0B429;
+    color: var(--accent-color);
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 700;
   }
   .header-brand::before {
     content: "";
     width: 8px;
     height: 8px;
-    background: #F0B429;
+    background: var(--accent-color);
     display: inline-block;
   }
   .header-step {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 13px;
     letter-spacing: 0.16em;
-    color: #888888;
+    color: var(--muted-color);
     text-transform: uppercase;
   }
 
@@ -99,46 +115,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border-subtle);
     padding-top: 22px;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 12px;
-    color: #777777;
+    color: var(--muted-color);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-top: auto;
   }
   .footer-cta {
-    color: #F0B429;
+    color: var(--accent-color);
     font-weight: 700;
   }
 
-  /* TIPOGRAFÍA PURA / COLORES */
-  .gold-text { color: #F0B429; }
+  /* TIPOGRAFÍA PURA Y CLASES AUXILIARES */
+  .gold-text, .accent-text { color: var(--accent-color); }
   .section-title-wrap { margin-top: 20px; }
   .headline-serif {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-serif), serif;
     font-weight: 300;
     font-style: italic;
     font-size: 40px;
     line-height: 1.05;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: var(--primary-text);
   }
   .headline-sans {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-weight: 800;
     font-size: 44px;
     line-height: 1.05;
     letter-spacing: -0.03em;
-    color: #F0B429;
+    color: var(--accent-color);
     text-transform: uppercase;
     margin-top: 4px;
   }
   .section-lead {
     font-size: 18px;
     line-height: 1.45;
-    color: #A09A90;
+    color: var(--secondary-text);
+    opacity: 0.85;
     margin-top: 10px;
     max-width: 850px;
   }
@@ -146,30 +163,30 @@
   /* SLIDE 01: COVER */
   .masthead { margin-top: 24px; }
   .masthead-tag {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 14px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #888888;
+    color: var(--muted-color);
     margin-bottom: 16px;
   }
   .masthead-serif {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-serif), serif;
     font-weight: 300;
     font-style: italic;
     font-size: 72px;
     line-height: 0.95;
     letter-spacing: -0.03em;
-    color: #FFFFFF;
+    color: var(--primary-text);
     max-width: 620px;
   }
   .masthead-sans {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-weight: 800;
     font-size: 50px;
     line-height: 1.0;
     letter-spacing: -0.03em;
-    color: #F0B429;
+    color: var(--accent-color);
     text-transform: uppercase;
     margin-top: 8px;
     max-width: 620px;
@@ -177,7 +194,7 @@
   .cover-subtitle {
     font-size: 20px;
     line-height: 1.45;
-    color: #D0C8B8;
+    color: var(--secondary-text);
     max-width: 520px;
     margin-top: 32px;
   }
@@ -200,44 +217,45 @@
     padding-left: 36px;
   }
   .col-tag {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 12px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #888888;
+    color: var(--muted-color);
     margin-bottom: 10px;
   }
-  .col-tag.gold { color: #F0B429; }
+  .col-tag.gold, .col-tag.accent { color: var(--accent-color); }
   .col-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--primary-text);
     line-height: 1.2;
     margin-bottom: 10px;
   }
   .col-body {
     font-size: 16px;
     line-height: 1.45;
-    color: #C0BCB4;
+    color: var(--secondary-text);
+    opacity: 0.9;
   }
   .col-stat {
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border-subtle);
   }
   .stat-num {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-weight: 800;
     font-size: 46px;
     line-height: 1;
-    color: #F0B429;
+    color: var(--accent-color);
   }
-  .stat-num.negative { color: #E05252; }
+  .stat-num.negative { color: var(--negative-color); }
   .stat-desc {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 11px;
-    color: #888888;
+    color: var(--muted-color);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-top: 6px;
@@ -245,17 +263,17 @@
 
   /* SLIDE 03: COMPARE */
   .quote-container {
-    border-left: 3px solid #F0B429;
+    border-left: 3px solid var(--accent-color);
     padding-left: 18px;
     margin: 14px 0 18px;
   }
   .quote-text {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-serif), serif;
     font-style: italic;
     font-weight: 300;
     font-size: 18px;
     line-height: 1.35;
-    color: #FFFFFF;
+    color: var(--primary-text);
     max-width: 840px;
   }
   .compare-columns {
@@ -273,27 +291,28 @@
     padding-left: 36px;
   }
   .compare-header {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-size: 19px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--primary-text);
     margin-bottom: 6px;
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
   .compare-badge {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #777777;
+    color: var(--muted-color);
   }
-  .compare-col.pro .compare-badge { color: #F0B429; }
+  .compare-col.pro .compare-badge { color: var(--accent-color); }
   .compare-item {
     font-size: 14px;
     line-height: 1.35;
-    color: #B0ABA0;
+    color: var(--secondary-text);
+    opacity: 0.85;
     position: relative;
     padding-left: 22px;
   }
@@ -301,13 +320,16 @@
     content: "—";
     position: absolute;
     left: 0;
-    color: #E05252;
+    color: var(--negative-color);
     font-weight: 700;
   }
-  .compare-col.pro .compare-item { color: #E8E0D0; }
+  .compare-col.pro .compare-item {
+    color: var(--secondary-text);
+    opacity: 1;
+  }
   .compare-col.pro .compare-item::before {
     content: "✓";
-    color: #F0B429;
+    color: var(--accent-color);
   }
 
   /* SLIDE 04: STEPS */
@@ -322,31 +344,35 @@
     grid-template-columns: 65px 1fr;
     gap: 20px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--border-subtle);
   }
   .step-row:last-child { border-bottom: none; }
   .step-number {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 28px;
     font-weight: 700;
-    color: #555555;
+    color: var(--muted-color);
     line-height: 1;
   }
-  .step-row.highlight .step-number { color: #F0B429; }
+  .step-row.highlight .step-number { color: var(--accent-color); }
   .step-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-size: 19px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: var(--primary-text);
     margin-bottom: 4px;
   }
-  .step-row.highlight .step-title { color: #F0B429; }
+  .step-row.highlight .step-title { color: var(--accent-color); }
   .step-body {
     font-size: 14px;
     line-height: 1.4;
-    color: #A09A90;
+    color: var(--secondary-text);
+    opacity: 0.8;
   }
-  .step-row.highlight .step-body { color: #E8E0D0; }
+  .step-row.highlight .step-body {
+    color: var(--secondary-text);
+    opacity: 1;
+  }
 
   /* SLIDE 05: CTA */
   .cta-metrics {
@@ -355,47 +381,48 @@
     gap: 60px;
     margin: 36px 0 44px;
     padding-bottom: 36px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-subtle);
   }
   .cta-metric-item { display: flex; flex-direction: column; }
   .cta-metric-val {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-weight: 800;
     font-size: 64px;
     line-height: 1;
-    color: #F0B429;
+    color: var(--accent-color);
     margin-bottom: 8px;
   }
   .cta-metric-desc {
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #888888;
+    color: var(--muted-color);
     line-height: 1.4;
   }
   .cta-action-wrap { max-width: 820px; }
   .cta-tag-badge {
     display: inline-block;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono), monospace;
     font-size: 12px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #F0B429;
+    color: var(--accent-color);
     margin-bottom: 12px;
   }
   .cta-main-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-sans), sans-serif;
     font-weight: 800;
     font-size: 46px;
-    color: #FFFFFF;
+    color: var(--primary-text);
     margin-bottom: 14px;
     letter-spacing: -0.02em;
   }
   .cta-main-desc {
     font-size: 19px;
     line-height: 1.5;
-    color: #B8B2A6;
+    color: var(--secondary-text);
+    opacity: 0.85;
   }
 
   @page {
@@ -407,7 +434,7 @@
       padding: 0 !important;
       margin: 0 !important;
       gap: 0 !important;
-      background: #000000 !important;
+      background: var(--bg-color) !important;
     }
     .slide {
       border: none !important;
@@ -421,7 +448,8 @@
 </head>
 <body>
 
-
+  <div id="deck">
+    
   <!-- SLIDE 01 -->
   <section class="slide" id="slide-01">
     <div class="slide-bg" style="background-image: url('file:///C:/Users/mgome/OneDrive/Documents/The%20Insightful%20Arrow/carousel-engine/assets/carousels/03-friccion-operativa-b2b/slide_01.jpg');"></div>
@@ -479,6 +507,7 @@
             <div class="col-title">Estrategia y Criterio de Alto Valor</div>
             <div class="col-body">El trabajo por el que el cliente paga: análisis profundo, toma de decisiones, desarrollo de entregables y resolución creativa de problemas.</div>
           </div>
+          
           <div class="col-stat">
             <div class="stat-num ">45%</div>
             <div class="stat-desc">DEL TIEMPO SEMANAL EFECTIVAMENTE FACTURADO</div>
@@ -491,6 +520,7 @@
             <div class="col-title">Fricción de Coordinación Interna</div>
             <div class="col-body">Buscar archivos en Drive, perseguir accesos por WhatsApp, armar reportes manuales en slides y recordar entregas internas pendientes.</div>
           </div>
+          
           <div class="col-stat">
             <div class="stat-num negative">55%</div>
             <div class="stat-desc">DE LA JORNADA CONSUMIDA EN GESTIÓN NO MONETIZABLE</div>
@@ -663,6 +693,7 @@
     </div>
   </section>
   
+  </div>
 
 </body>
 </html>

@@ -23,14 +23,15 @@ This file is the living memory of the carousel engine. It tracks the current ope
 - [x] **Slop Removal:** `deck.html` stripped of all UI "mulets" (boxes/blurs).
 - [x] **Multimodal Pipeline:** API protocol established for moodboard injection.
 - [x] **Structure:** Folders & Files architecture implemented (Knowledge Base separated from Execution).
-- [x] **Dynamic Compiler:** `compiler.cjs` now renders based on JSON config (No more hardcoding).
+- [x] **Dynamic Compiler:** `scripts/compiler.cjs` unified and clean; injects `design_tokens.json` dynamically into `templates/deck.html` CSS custom properties.
+- [x] **Brand Guidance Layer:** Created `brand.md` containing brand brief, lexicon, banned words, and multimodal prompt formula.
+- [x] **Nano Banana Pro Integration:** Created `scripts/generate-images.cjs` connecting to Gemini Image Engine (`nano-banana-pro-preview`) with multimodal moodboard injection, and added `--generate-images` one-shot flag to `scripts/compiler.cjs`.
+- [x] **Sanitized Workspace:** Removed residual files with typo names and verified test carousel 04 compilation.
 
 ---
 
 ## 🚧 Active Blockers & Next Steps
-- [ ] **Visual Validation:** Run `node scripts/compiler.cjs` and audit the PNGs for "Editorial Air".
-- [ ] **Prompt Testing:** Validate that the API multimodal injection (`moodboards/` $\rightarrow$ API) matches the moodboard depth.
-- [ ] **Content Pipeline:** Transition from "manual prompts" to "JSON-driven prompt generation".
+- [ ] **Google AI Studio Billing:** Ensure `GEMINI_API_KEY` has pay-as-you-go quota enabled on Google AI Studio to unlock full concurrent image generation on `nano-banana-pro-preview`.
 
 ---
 
@@ -38,6 +39,9 @@ This file is the living memory of the carousel engine. It tracks the current ope
 - **Decision 2026-09-21:** Moved from "Description-based prompting" to "Reference-based multimodal prompting" to eliminate AI slop.
 - **Decision 2026-09-21:** Removed all UI containers from HTML to achieve the "Naked Typography" look.
 - **Decision 2026-09-21:** Reorganized documentation into `knowledge_base/` to prevent agent cognitive overload.
+- **Decision 2026-09-22:** Replaced monolithic compiler with simple, unified `scripts/compiler.cjs` consuming `design_tokens.json` directly into `templates/deck.html`.
+- **Decision 2026-09-22:** Created `brand.md` as the guidance layer for copy and prompts.
+- **Decision 2026-09-22:** Integrated Nano Banana Pro via `scripts/generate-images.cjs` and `scripts/compiler.cjs --generate-images` for full autonomous agent execution.
 
 ---
 

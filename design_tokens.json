@@ -1,0 +1,29 @@
+{
+  "brand_name": "The Insightful Arrow",
+  "colors": {
+    "background": "#000000",
+    "primary_text": "#FFFFFF",
+    "secondary_text": "#E8E0D0",
+    "accent": "#F0B429",
+    "muted": "#888888"
+  },
+  "typography": {
+    "display_serif": "Fraunces",
+    "statement_sans": "Space Grotesk",
+    "technical_mono": "Space Mono",
+    "body_sans": "Inter"
+  },
+  "composition": {
+    "subject_anchor": "bottom",
+    "void_percentage": 60,
+    "aspect_ratio": "4:5"
+  },
+  "image_generation": {
+    "primary_model": "black-forest-labs/flux-1-dev",
+    "fallback_models": [
+      "black-forest-labs/flux-1-schnell",
+      "stabilityai/stable-diffusion-3.5-large"
+    ],
+    "use_multimodal_ref": true
+  }
+}
